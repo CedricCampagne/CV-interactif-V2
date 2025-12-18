@@ -3,149 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV-Campagne Cédric</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>CV-Campagne Cédric-V2</title>
+    <link rel="stylesheet" href="./src/css/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
-<body class="container">
-    <header>
-        <div class="cv_header">            
-            <img src="images/cv_photo.jpeg" alt="photo de profile">
-            <div class="cv_header_title">
-                <h2>Cédric</h2>
-                <h2>Campagne</h2>
-                <h1>Développeur Web Full Stack</h1>
+<body class="bg-slate-700 p-8">
+<div class="container m-auto p-4 bg-slate-600 text-slate-100">
+        <header class="flex flex-col">
+            <div class="flex justify-between items-center">            
+                <img class="w-56 h-56 object-cover rounded-full" src="src/assets/images/cv_photo.jpeg" alt="photo de profile">
+                <div class="flex-3 flex flex-col items-center">
+                    <h2 class="text-2xl">Cédric</h2>
+                    <h2 class="text-2xl">Campagne</h2>
+                    <h1 class="text-3xl pt-2 text-center text-slate-50">Développeur Web Full Stack</h1>
+                </div>
+                <div>
+                    <ul class="m-5">
+                        <li class="p-5 hover:underline hover:-translate-x-4 hover:scale-115 duration-300"><i class="fa-brands fa-github text-3xl text-slate-50 pr-2"></i><a href="https://github.com/CedricCampagne" target="blank">Voir mes projets sur GitHub</a></li>
+                        <li class="p-5 hover:underline hover:-translate-x-4 hover:scale-115 duration-300"><i class="fa-solid fa-briefcase text-3xl text-slate-50 pr-2"></i><a href="">(Portfolio en construction)</a></li>
+                    </ul> 
+                </div>
+            </div>          
+            <div class="flex justify-around items-center h-10 mt-4 border-b-2">
+                <div class="flex items-center"><i class="fa-solid fa-mobile-screen text-slate-50 pr-2"></i><p>06.68.25.25.62</p></div>
+                <div class="flex items-center"><i class="fa-solid fa-envelope text-slate-50 pr-2"></i><p>ced.campagne@gmail.com</p> </div>
+                <div class="flex items-center"><i class="fa-solid fa-location-dot text-slate-50 pr-2"></i><p>28130 Villiers-le-Morhier</p></div>
+                <div class="flex items-center"><i class="fa-brands fa-linkedin text-slate-50 pr-2"></i><a class=" hover:underline" href="https://www.linkedin.com/in/cédriccampagne" target="blank">Voir mon parcours sur LinkedIn</a></a></div>                
+            </div>        
+            <div class="text-center text-2xl my-8" id="description">
+                Ancien directeur de restaurant, j’ai forgé des compétences solides en gestion, organisation et résolution de problèmes.
+                Aujourd’hui, je les mets au service du développement web, avec une approche rigoureuse et orientée utilisateur.
             </div>
-            <ul class="cv_header_list">
-                <li class="cv_header_link"><i class="fa-brands fa-github"></i><a href="https://github.com/CedricCampagne" target="blank">Voir mes projets sur GitHub</a></li>
-                <li class="cv_header_link"><i class="fa-solid fa-briefcase"></i><a href="">(Portfolio en construction)</a></li>
-            </ul> 
-        </div>          
-            <div class="header_profile">
-                <div class="header_profile_container"><i class="fa-solid fa-mobile-screen"></i><p>06.68.25.25.62</p></div>
-                <div class="header_profile_container"><i class="fa-solid fa-envelope"></i><p>ced.campagne@gmail.com</p> </div>
-                <div class="header_profile_container"><i class="fa-solid fa-location-dot"></i><p>28130 Viliiers-le-Morhier</p></div>
-                <div class="header_profile_container"><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/cédriccampagne" target="blank">Voir mon parcours sur LinkedIn</a></a></div>                
+            <div class="p-5 text-2xl  mt-12 hidden" id="menu">
+                <nav>
+                    <ul class="flex justify-around list-none">  
+                        <li class="hover:underline"><a href="">Accueil</a></li>
+                        <li class="hover:underline"><a href="#" onclick="ShowGrid('professional_experience')">Experiences professionnelles</a></li>
+                        <li class="hover:underline"><a href="#" onclick="ShowGrid('education')">Formations</a></li>
+                        <li class="hover:underline"><a href="#" onclick="ShowGrid('soft_skill')">Soft Skill</a></li>        
+                        <li class="hover:underline"><a href="#" onclick="ShowGrid('hard_skill')">Compétences</a></li>                           
+                    </ul>
+                </nav>
+               
             </div>
-        
-        <div class="description" id="description">
-            Ancien directeur de restaurant, j’ai développé des compétences solides en gestion d’équipe, en organisation et en résolution rapide de problèmes, 
-            que je transpose aujourd’hui au développement web. Actuellement en formation de développeur web (niveau bac+2), 
-            je maîtrise les bases des langages et outils nécessaires à la création de sites et d’applications. Curieux, adaptable et orienté utilisateur, 
-            je mets un point d’honneur à livrer un travail rigoureux et de qualité. Je suis à la recherche d’un stage afin de mettre en pratique mes acquis, 
-            continuer de progresser et contribuer activement à des projets concrets.
-        </div>
-        <div class="header_nav" id="header_nav">
-            <div class="nav">  
-                <li><a href="">Accueil</a></li>
-                <li><a href="#" onclick="ShowGrid('professional_experience')">Experiences professionnelles</a></li>
-                <li><a href="#" onclick="ShowGrid('education')">Formations</a></li>
-                <li><a href="#" onclick="ShowGrid('soft_skill')">Soft Skill</a></li>        
-                <li><a href="#" onclick="ShowGrid('hard_skill')">Compétences</a></li>                           
-            </div>
-        </div>
-    </header>
-    <div class="main_container_all" id="home" >
-        <section class="left_col">
-            <section class="professional_experience">
-                <div class="professional_experience_title"></div>
-                <a href="#" onclick="ShowGrid('professional_experience')"><h3>Expériences professionnelles</h3></a>
-                <strong>Directeur de restaurant</strong>
-                <p>McDonald’s Maurepas (78)| Nov. 2017 -Mai.2025</p>
-                <ul>
-                    <li>Pilotage d’un centre de profit (CA : 4M€) avec gestion administrative, financière et opérationnelle</li>
+        </header>
+        <div class="grid grid-cols-2 gap-8 py-2 mt-5" id="home" >
+            <section class="p-4 shadow-xl/30 border-t-2 rounded-lg hover:bg-slate-500 duration-400 cursor-pointer" onclick="ShowGrid('professional_experience')">
+                <a href="#"><h3 class="text-slate-50 text-xl pb-5">Expériences professionnelles</h3></a>
+                <p class="underline underline-offset-5 mb-1.5">Directeur de restaurant : McDonald’s Maurepas (78) De Nov 2017 à Mai 2025</p>
+                <ul class="list-disc list-inside pl-5 flex flex-col gap-1.5">
+                    <li>Pilotage d’un centre de profit : gestion administrative, financière</li>
                     <li>Encadrement et formation d’une équipe pluridisciplinaire</li>
                     <li>Mise en place de process optimisés pour améliorer l’efficacité et la qualité</li>
                     <li>Analyse des ventes et adaptation des stratégies</li>
                     <li>Gestion des priorités dans un environnement dynamique</li>
                 </ul>
             </section>
-            <section class="education">
-                <a href="#" onclick="ShowGrid('education')"><h3>Formations</h3></a>
-                <ul class="education_detail">
-                    <li>
-                        <strong>Développeur Web et Web mobile full stack</strong>
-                        <p>École O’clock - Formation en Télé présentiel</p>
-                        <p>De Juin 2025 à Janvier 2026</p>
-                        <h4>Préparation au titre professionnel de niveau V</h4>
-                        <p>Développeur web et web mobile</p>
-                    </li>
-                    <li>
-                        <strong>Formation Interne : Gestion et management (Siege McDonald’s France)</p></strong>    
-                        <h4>DLP “Devenir Son Leader et Performer”</h4>
-                        <p>Définir la vison du restaurant, embarquer les équipes et coacher</p>
-                        <h4>RLM Révéler le Leader en Moi</h4>
-                        <p>Gestion de ses émotions et organiser son travail</p>
-                    </li>
-                </ul>                                                
-            </section>
-        </section>
-        <section class="right_col">
-            <div class="home_soft_skill">
-                <a href="#" onclick="ShowGrid('soft_skill')"><h3>Soft Skill</h3></a>
-                <ul>
+           <section class="p-4 shadow-xl/30 border-t-2 rounded-lg  hover:bg-slate-500 duration-400 cursor-pointer" onclick="ShowGrid('soft_skill')">
+                <a href="#"><h3 class="text-slate-50 text-xl pb-5">Soft Skills</h3></a>
+                <ul class="list-disc list-inside pl-5 flex flex-col gap-1.5">
                     <li>Gestion du temps et priorisation</li>
                     <li>Résolution de problèmes</li>
                     <li>Travail en équipe & communication</li>
                     <li>Adaptabilité & apprentissage rapide</li>
                 </ul>
-            </div>
-            <div class="home_hard_skill">
-                <a href="#" onclick="ShowGrid('hard_skill')"><h3>Compétences</h3></a>
-                <ul>
-                    <li>
-                        <strong>Intégration web</strong>
-                        <p>
+            </section>
+           <section class="p-4 shadow-xl/30 border-t-2 rounded-lg  hover:bg-slate-500 duration-400 cursor-pointer" onclick="ShowGrid('education')">
+                <a href="#"><h3 class="text-slate-50 text-xl pb-5">Formations</h3></a>
+                <ul class="pl-5">
+                    <li class="mb-2 flex flex-col gap-1.5">
+                        <span class="underline underline-offset-5 text-white">Développeur Web et Web mobile full stack</span>
+                        <div class="ml-2">
+                            <p>École O’clock - Formation en Télé présentiel</p>
+                            <p>De Juin 2025 à Janvier 2026</p>
+                            <h4>Préparation au titre professionnel de niveau V :</h4>
+                            <p>Développeur web et web mobile</p>
+                        </div>
+                        
+                    </li>
+                   <li class="mb-2 flex flex-col gap-1.5">
+                        <span class="underline underline-offset-5 text-white">Formation Interne : Gestion et management (Siege McDonald’s France)</p></span>  
+                        <div class="ml-2">
+                            <h4>DLP “Devenir Son Leader et Performer”</h4>
+                            <p>Définir la vison du restaurant, embarquer les équipes et coacher</p>
+                            <h4>RLM Révéler le Leader en Moi</h4>
+                            <p>Gestion de ses émotions et organiser son travail</p>
+                        </div>  
+                    </li>
+                </ul>                                                
+            </section>
+          <section class="p-4 shadow-xl/30 border-t-2 rounded-lg hover:bg-slate-500 duration-400 cursor-pointer" onclick="ShowGrid('hard_skill')">
+                <a href="#"><h3 class="text-slate-50 text-xl pb-5">Compétences</h3></a>
+                 <ul class="list-disc pl-5">
+                    <li class="mb-2 flex flex-col gap-1.5">
+                        <span class="underline underline-offset-5 text-white">Intégration web</span>
+                        <p class="ml-2">
                             Maîtrise du HTML5 et du CSS3 selon les standards d’accessibilité (W3C, RGAA), Respect des bonnes pratiques UX/UI et responsive design
                         </p>
                     </li>
-                    <li>
-                        <strong>Développement FrontEnd</strong>
-                        <p>
+                    <li class="mb-2 flex flex-col gap-1.5">
+                        <span class="underline underline-offset-5">Développement FrontEnd</span>
+                        <p class="ml-2">
                             JavaScript Vanilla : manipulation du DOM, gestion des événements, appels API, 
-                            Framework Svelte / Svelte-kit : composants réactifs, gestion d’état, routage, optimisation des performances
+                            Framework Svelte/Svelte-kit : composants réactifs, gestion d’état, routage, optimisation des performances
                         </p>
                     </li>
-                    <li>
-                        <strong>Développement BackEnd</strong>
-                        <p>
+                    <li class="mb-2 flex flex-col gap-1.5">
+                        <span class="underline underline-offset-5">Développement BackEnd</span>
+                        <p class="ml-2">
                             Développement BackEnd
                             Conception et développement d’API REST, Gestion des bases de données (SQL), Mise en place d’un serveur avec Node.js
                         </p>
                     </li>
                 </ul>
-            </div>
-            <div class="languages">
-                <h3>Langues</h3>
+            </section>
+            <section class="col-span-2 text-center shadow-xl/30 border-t-2 rounded-lg  hover:bg-slate-600 duration-400">
+                <h3 class="text-slate-50 text-xl">Langues</h3>
                 <ul>
                     <li>Anglais B2</li>
                 </ul>
-            </div>
-        </section>
+            </section>
     </div>
     <!-- div Experiences professionnelles -->
-    <div class="main_container_all" id="professional_experience">
-        <button class="toggle_btn" id="btn_exp" data-target="#exp_table">
+    <div class="flex flex-col justify-center text-white mt-8 hidden" id="professional_experience">
+        <button id="btn_skill" data-target="#exp_table" class="toggle_btn text-2xl mt-6 hover:scale-125 duration-300">
             Mes expériences professionnelles
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="chevron fa-solid fa-chevron-down text-2xl m-8"></i>
         </button>
-        <div class="table_container">
-            <table class="toggle_content" id="exp_table">
-                <tr>
-                    <th class="thExp">Années</th>
-                    <th class="thExp">Lieu</th>
-                    <th class="thExp">Poste occupé</th>
-                    <th class="thExp">Compétences acquises</th>
-                </tr>
-                <tr>
-                    <td>2017-2025</td>
-                    <td><b>Directeur de restaurant</b></td>
-                    <td>McDonald's Maurepas (78)</td>
-                    <td>
-                        <ul>
+
+        <div class="overflow-x-auto hidden" id="exp_table">
+            <table id="exp_table" class="min-w-[800px] border-collapse bg-slate-800 text-slate-100 rounded-lg overflow-hidden mt-4">
+                <thead>
+                    <tr class="bg-slate-500">
+                        <th class="p-4 text-left font-bold text-base border-b border-slate-600">Années</th>
+                        <th class="p-4 text-left font-bold text-base border-b border-slate-600">Lieu</th>
+                        <th class="p-4 text-left font-bold text-base border-b border-slate-600">Poste occupé</th>
+                        <th class="p-4 text-left font-bold text-base border-b border-slate-600">Compétences acquises</th>
+                    </tr>
+                </thead>
+              
+                <tr class="odd:bg-slate-100 even:bg-slate-200 text-slate-900">
+                    <td class="p-4 border-t border-slate-300">2017-2025</td>
+                    <td class="p-4 border-t border-slate-300"><b>Directeur de restaurant</b></td>
+                    <td class="p-4 border-t border-slate-300">McDonald's Maurepas (78)</td>
+                    <td class="p-4 border-t border-slate-300">
+                        <ul class="list-disc pl-5">
                             <li>
                                 <b>Gestion d’un centre de profit :</b> Management opérationnel,
                                 suivi financier, optimisation des performances commerciales
@@ -165,12 +169,12 @@
                         </ul>
                     </td>
                 </tr>
-                <tr>
-                    <td>2014-2017</td>
-                    <td><b>Directeur Adjoint</b></td>
-                    <td>McDonald's Rambouillet (78)</td>
-                    <td>
-                        <ul>
+                <tr class="odd:bg-slate-100 even:bg-slate-200 text-slate-900">
+                    <td class="p-4 border-t border-slate-300">2014-2017</td>
+                    <td class="p-4 border-t border-slate-300"><b>Directeur Adjoint</b></td>
+                    <td class="p-4 border-t border-slate-300">McDonald's Rambouillet (78)</td>
+                    <td class="p-4 border-t border-slate-300">
+                        <ul class="list-disc pl-5">
                             <li>
                                 <b>Gestion operattionelle d'une équipe de managers :</b> <br>Garant du developpement et du bon fonctionnement 
                                 de tous le coté operationnel.
@@ -185,14 +189,14 @@
                         </ul>                           
                     </td>
                 </tr>
-                <tr>
-                    <td>2005-2017</td>
-                    <td><b>Manager</b></td>
-                    <td>McDonald's Coignieres (78)</td>
-                    <td>
-                        <ul>
+                <tr class="odd:bg-slate-100 even:bg-slate-200 text-slate-900">
+                    <td class="p-4 border-t border-slate-300">2005-2017</td>
+                    <td class="p-4 border-t border-slate-300"><b>Manager</b></td>
+                    <td class="p-4 border-t border-slate-300">McDonald's Coignieres (78)</td>
+                    <td class="p-4 border-t border-slate-300">
+                        <ul class="list-disc pl-5">
                             <li>
-                                <b>Gestion  en autonimied'un quart de travail (ouverture ou fermeture)</b> <br> Responsable du bon déroulement
+                                <b>Gestion  en autonimie d'un quart de travail (ouverture ou fermeture)</b> <br> Responsable du bon déroulement
                                 d'un quart de travail : Gestion des équipes, de la sécurité alimentaire et des personnes, du service a la clientele.
                             </li>
                         </ul>
@@ -200,11 +204,11 @@
                 </tr>
             </table>
         </div>        
-        <button class="toggle_btn" id="btn_skill" data-target="#skill">
+        <button id="btn_skill" data-target="#skill" class="toggle_btn text-2xl mt-6 hover:scale-125 duration-300">
             Mes compétences
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="chevron fa-solid fa-chevron-down text-2xl m-8"></i>
         </button>
-        <div class="toggle_content" id="skill">
+        <div class="p-9 text-1xl leading-loose hidden" id="skill">
             <p>
                 En tant que directeur de restaurant dans la restauration rapide, j’ai acquis une expertise solide en gestion opérationnelle : 
                 planification des équipes, suivi des indicateurs de performance, respect des normes d’hygiène et de sécurité, gestion des stocks et optimisation des coûts. <br>
@@ -216,90 +220,90 @@
                 pour évoluer dans des environnements exigeants et dynamiques.
             </p>
         </div>
-        <button class="toggle_btn" id="btn_hard_skill" data-target="#exp_hard_skill">
+       <button id="btn_skill" data-target="#exp_hard_skill" class="toggle_btn text-2xl mt-6 hover:scale-125 duration-300">
             Liste des Hard Skill
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="chevron fa-solid fa-chevron-down text-2xl m-8"></i>
         </button>
-        <div class="toggle_content" id="exp_hard_skill">
-            <p>
+        <div id="exp_hard_skill" class="hidden">
+            <p class="p-9  text-1xl leading-loose">
                 Les hard skills d’un directeur de restaurant McDonald’s couvrent la gestion opérationnelle et financière, la maîtrise
                 des normes d’hygiène et de sécurité, la gestion RH et des stocks, ainsi que le contrôle qualité et le service client. <br>
                 Ce sont des compétences techniques indispensables pour assurer la performance et la conformité d’un restaurant.
             </p>
-            <ul>
-                <li>
+            <ul class="p-9  text-1xl leading-loose list-disc">
+                <li class="mx-8">
                     <b>Gestion opérationnelle :</b> supervision des opérations quotidiennes, organisation des quarts de travail, respect des procédures internes
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Gestion financière :</b> suivi du chiffre d’affaires, contrôle des coûts, optimisation de la rentabilité et du budget
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Gestion des ressources humaines :</b> recrutement, planification des horaires, formation et encadrement des équipes pluridisciplinaires
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Connaissance des normes d’hygiène et de sécurité :</b> application stricte des règles de sécurité alimentaire et des normes sanitaires
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Contrôle qualité :</b> maintien des standards de qualité des produits et du service, audits réguliers
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Gestion des stocks et des approvisionnements :</b> suivi des inventaires, anticipation des besoins, relations avec les fournisseurs
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Service client :</b> mise en place de plans d’action pour améliorer l’expérience client et fidéliser la clientèle
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Compétences en communication professionnelle :</b> échanges avec les équipes, les prestataires et parfois les instances externes
                 </li>
-                <li>
+               <li class="mx-8">
                    <b> Utilisation d’outils de gestion :</b> logiciels internes McDonald’s pour la planification, le suivi des ventes et la formation
                 </li>
             </ul>
         </div>
-        <button class="toggle_btn" id="btn_soft_skill" data-target="#exp_soft_skill">
+       <button id="btn_skill" data-target="#exp_soft_skill" class="toggle_btn text-2xl mt-6 hover:scale-125 duration-300">
             Liste des Soft Skill
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="chevron fa-solid fa-chevron-down text-2xl m-8"></i>
         </button>
-        <div class="toggle_content" id="exp_soft_skill">
-            <p>
+        <div class="hidden" id="exp_soft_skill">
+            <p class="p-9  text-1xl leading-loose">
                 Les principaux soft skills d’un directeur de restaurant McDonald’s sont liés au leadership, 
                 à la communication et à la gestion d’équipes dans un environnement exigeant. 
                 Ils permettent d’assurer la performance du restaurant tout en garantissant une bonne expérience client et un climat de travail positif
             </p>
-            <p>
+            <p class="p-9  text-1xl leading-loose">
                 Un directeur de restaurant McDonald’s doit combiner leadership, 
                 communication, gestion du stress et orientation client avec une forte capacité d’adaptation et de résolution de problèmes. 
                 Ces soft skills sont aussi importants que les compétences techniques pour garantir la réussite et la pérennité du restaurant
             </p>
-            <ul>
-                <li>
+            <ul class="p-9  text-1xl leading-loose list-disc">
+               <li class="mx-8">
                     <b>Leadership et management d’équipe :</b> Capacité à motiver, fédérer et inspirer des équipes pluridisciplinaires, souvent jeunes et variées.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Communication efficace :</b> Transmission claire des consignes, écoute active des collaborateurs et gestion des échanges avec les clients.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Gestion du stress et sang-froid :</b> Maintien d’une attitude professionnelle et calme dans des environnements à forte pression et rythme soutenu.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Orientation client :</b> Sens du service, empathie et capacité à créer une expérience client positive et fidélisante.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Adaptabilité et flexibilité :</b> Réactivité face aux imprévus (pénuries, afflux de clients, incidents techniques) et ajustement rapide des plans.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Esprit d’équipe et collaboration :</b> Travail en synergie avec les managers adjoints et les équipiers pour atteindre les objectifs communs.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Résolution de problèmes :</b> Aptitude à identifier rapidement les difficultés et à mettre en place des solutions pragmatiques.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Organisation et priorisation :</b> Capacité à gérer simultanément plusieurs tâches (planning, stocks, qualité, service client) sans perdre en efficacité.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Sens pédagogique :</b> Formation et accompagnement des équipes pour développer leurs compétences et assurer leur progression.
                 </li>
-                <li>
+               <li class="mx-8">
                     <b>Ouverture et intelligence émotionnelle :</b> Compréhension des besoins des collaborateurs, gestion des conflits et maintien d’un climat de travail positif.
                 </li>
             </ul>
@@ -307,47 +311,51 @@
     </div>
     
     <!-- div Formations -->
-    <div class="main_container_all" id="education">
-        <button class="toggle_btn" id="btn_exp" data-target="#dwwm">
-            Développeur Web et Web mobile full stac
-            <i class="fa-solid fa-chevron-down"></i>
+    <div class="flex flex-col text-white mt-8 hidden" id="education">
+        <button id="btn_exp" data-target="#dwwm" class="toggle_btn text-2xl mt-6 hover:scale-125 duration-300">
+            Développeur Web et Web mobile full Stack
+            <i class="chevron fa-solid fa-chevron-down text-2xl m-8"></i>
         </button>
-        <div class="toggle_content" id="dwwm">
-            <p>La formation DWWM (Développeur Web et Web Mobile) chez O’clock est une formation intensive et professionnalisante qui
-                prépare au titre professionnel reconnu par l’État. Elle se déroule en téléprésentiel, avec des cours donnés en
-                direct par des formateurs, et combine théorie, pratique et projets concrets. L’objectif est de former des
-                développeurs capables de concevoir et de maintenir des sites web et des applications mobiles, en maîtrisant aussi
-                bien le front-end que le back-end. La pédagogie repose sur une immersion totale, un accompagnement personnalisé et
-                un rythme soutenu, permettant aux apprenants de progresser rapidement. La formation inclut également un stage
-                obligatoire et prépare à l’examen du titre professionnel DWWM, ouvrant la voie à des postes de développeur web,
-                développeur fullstack ou intégrateur web.
-            </p>
-            <h5> Compétences Front-end : </h5>
-            <ul>
-                <li>Maîtrise du <b>HTML5</b> et du <b>CSS3</b> pour la structure et le style des pages web</li>
-                <li>Utilisation de <b>JavaScript</b> pour l’interactivité et la logique côté client</li>
-                <li>Frameworks front modernes (<b>Svelte</b>)</li>
-                <li>Gestion du <b>responsive</b> design et accessibilité (UX/UI)</li>
-                <li>Intégration de maquettes et optimisation de l’expérience utilisateur</li>
-            </ul>
-            <h5> Compétences Back-end : </h5>
-            <ul>
-                <li>Programmation en <b>JavaScript</b> côté serveur avec <b>Node.js</b></li>
-                <li>Utilisation du framework <b>Express.js</b> pour créer des applications web et des <b>API REST</b></li>
-                <li><b>ORM Sequelize</b> pour gérer les bases de données relationnelles (<b>PostgreSQL</b>)</li>
-                <li>Conception et consommation d’API REST pour la communication entre front et back</li>
-                <li>Notions de sécurité : authentification, gestion des droits, protection des données</li>
-                <li>Déploiement et hébergement d’applications web (serveurs, environnements de production)</li>
-                <li>Configuration et utilisation de <b>Docker</b> pour la containerisation et la gestion des environnements applicatifs</li>
-            </ul>
+        <div id="dwwm" class="p-9 text-1xl leading-loose hidden">
+            <div>
+                <p class="p-9  text-1xl leading-loose">
+                    La formation DWWM (Développeur Web et Web Mobile) chez O’clock est une formation intensive et professionnalisante qui
+                    prépare au titre professionnel reconnu par l’État. Elle se déroule en téléprésentiel, avec des cours donnés en
+                    direct par des formateurs, et combine théorie, pratique et projets concrets. L’objectif est de former des
+                    développeurs capables de concevoir et de maintenir des sites web et des applications mobiles, en maîtrisant aussi
+                    bien le front-end que le back-end. La pédagogie repose sur une immersion totale, un accompagnement personnalisé et
+                    un rythme soutenu, permettant aux apprenants de progresser rapidement. La formation inclut également un stage
+                    obligatoire et prépare à l’examen du titre professionnel DWWM, ouvrant la voie à des postes de développeur web,
+                    développeur fullstack ou intégrateur web.
+                </p>
+                <h5 class="px-9 text-2xl"> Compétences Front-end : </h5>
+                <ul class="p-9  text-1xl leading-loose list-disc">
+                    <li class="mx-8">Maîtrise du <b>HTML5</b> et du <b>CSS3</b> pour la structure et le style des pages web</li>
+                    <li class="mx-8">Utilisation de <b>JavaScript</b> pour l’interactivité et la logique côté client</li>
+                    <li class="mx-8">Frameworks front modernes (<b>Svelte</b>)</li>
+                    <li class="mx-8">Gestion du <b>responsive</b> design et accessibilité (UX/UI)</li>
+                    <li class="mx-8">Intégration de maquettes et optimisation de l’expérience utilisateur</li>
+                </ul>
+                <h5 class="px-9 text-2xl"> Compétences Back-end : </h5>
+                <ul class="p-9  text-1xl leading-loose list-disc">
+                    <li class="mx-8">Programmation en <b>JavaScript</b> côté serveur avec <b>Node.js</b></li>
+                    <li class="mx-8">Utilisation du framework <b>Express.js</b> pour créer des applications web et des <b>API REST</b></li>
+                    <li class="mx-8"><b>ORM Sequelize</b> pour gérer les bases de données relationnelles (<b>PostgreSQL</b>)</li>
+                    <li class="mx-8">Conception et consommation d’API REST pour la communication entre front et back</li>
+                    <li class="mx-8">Notions de sécurité : authentification, gestion des droits, protection des données</li>
+                    <li class="mx-8">Déploiement et hébergement d’applications web (serveurs, environnements de production)</li>
+                    <li class="mx-8">Configuration et utilisation de <b>Docker</b> pour la containerisation et la gestion des environnements applicatifs</li>
+                </ul>
+            </div>
+            
         </div>
 
-        <button class="toggle_btn" id="btn_exp" data-target="#mcdo">
+        <button id="btn_exp" data-target="#mcdo" class="toggle_btn text-2xl mt-6 hover:scale-125 duration-300">
             Formation Interne : Gestion et management (Siege McDonald’s France)
-            <i class="fa-solid fa-chevron-down"></i>
+            <i class="chevron fa-solid fa-chevron-down text-2xl m-8"></i>
         </button>
-        <div class="toggle_content" id="mcdo">
-            <p>
+        <div id="mcdo" class="hidden">
+            <p class="p-9  text-1xl leading-loose">
                 Les formations internes <b>DLP</b> et <b>RLM</b> proposées au siège de McDonald’s sont conçues pour accompagner les
                 directeurs dans leur montée en compétences. Le programme DLP met l’accent sur le rôle de <b>leader de proximité</b> :
                 encadrement des équipes, communication, gestion du quotidien et développement des collaborateurs. Il s’agit de donner
@@ -358,27 +366,27 @@
                 l’évolution professionnelle au sein de McDonald’s, en garantissant une cohérence managériale et une culture d’entreprise
                 partagée.
             </p>
-            <h5>DLP – Développement des Leaders de Proximité</h5>
-            <ul>
-                <li>Encadrement et animation d’équipe</li>
-                <li>Communication interpersonnelle et motivation</li>
-                <li>Gestion des plannings et organisation opérationnelle</li>
-                <li>Développement des compétences des collaborateurs</li>
-                <li>Suivi de la qualité de service et de l’expérience client</li>
+            <h5 class="px-9 text-2xl">DLP – Développement des Leaders de Proximité</h5>
+            <ul class="p-9  text-1xl leading-loose list-disc">
+                <li class="mx-8">Encadrement et animation d’équipe</li>
+                <li class="mx-8">Communication interpersonnelle et motivation</li>
+                <li class="mx-8">Gestion des plannings et organisation opérationnelle</li>
+                <li class="mx-8">Développement des compétences des collaborateurs</li>
+                <li class="mx-8">Suivi de la qualité de service et de l’expérience client</li>
             </ul>
-            <h5>RLM – Restaurant Leadership Management</h5>
-            <ul>
-                <li>Pilotage financier et gestion d’un centre de profit</li>
-                <li>Stratégie commerciale et optimisation des ventes</li>
-                <li>Gestion des ressources humaines à l’échelle du restaurant</li>
-                <li>Application des normes d’hygiène, sécurité et qualité</li>
-                <li>Leadership global et vision stratégique</li>
+            <h5 class="px-9 text-2xl">RLM – Restaurant Leadership Management</h5>
+            <ul class="p-9  text-1xl leading-loose list-disc">
+                <li class="mx-8">Pilotage financier et gestion d’un centre de profit</li>
+                <li class="mx-8">Stratégie commerciale et optimisation des ventes</li>
+                <li class="mx-8">Gestion des ressources humaines à l’échelle du restaurant</li>
+                <li class="mx-8">Application des normes d’hygiène, sécurité et qualité</li>
+                <li class="mx-8">Leadership global et vision stratégique</li>
             </ul>
         </div>
     </div>
 
     <!-- div Soft Skill -->
-    <div class="main_container_all" id="soft_skill">
+    <div class="hidden" id="soft_skill">
         <article>
             <p>
                 En tant que directeur de restaurant McDonald’s, j’ai développé des <b>soft skills</b> essentiels qui constituent un véritable
@@ -403,11 +411,11 @@
                 vers la qualité, <b>directement applicables au développement et à la maintenance d’applications web.</b>
             </p>
          </article>              
-        <button class="toggle_btn" id="btn_exp" data-target="#soft_skill_ul">
+        <button id="btn_exp" data-target="#soft_skill_ul">
             Liste des soft skills
             <i class="fa-solid fa-chevron-down"></i>
         </button>
-        <div class="toggle_content" id="soft_skill_ul">
+        <div id="soft_skill_ul">
             <ul>
                 <li><b>Collaboration et travail en équipe</b> (méthodes agiles, pair programming, communication avec les métiers)</li>
                 <li><b>Résolution de problèmes</b> et esprit analytique</li>
@@ -421,7 +429,7 @@
         </div>          
     </div>
     <!-- Compétences -->
-    <div class="main_container_all" id="hard_skill">
+    <div class="main_container_all hidden" id="hard_skill">
         <article>
             <p>
                 Je maîtrise les langages fondamentaux du web, avec une solide expertise en <b>HTML5, CSS3 et JavaScript (ES6+)</b>
@@ -446,11 +454,11 @@
                 Docker, ce qui me donne une approche complète du développement full stack.
             </p>
         </article>
-        <button class="toggle_btn" id="btn_exp" data-target="#hard_skill_front">
+        <button id="btn_exp" data-target="#hard_skill_front">
             Compétences Front-end
             <i class="fa-solid fa-chevron-down"></i>
         </button>
-        <div class="toggle_content" id="hard_skill_front">
+        <div id="hard_skill_front">
             <ul>
                 <li>Maîtrise du <b>HTML5</b> et du <b>CSS3</b> pour la structure et le style des pages web</li>
                 <li>Utilisation de <b>JavaScript (ES6+)</b> pour l’interactivité côté client</li>
@@ -459,11 +467,11 @@
                 <li>Intégration de maquettes et optimisation de l’expérience utilisateur</li>
             </ul>            
         </div>
-        <button class="toggle_btn" id="btn_exp" data-target="#hard_skill_back">
+        <button id="btn_exp" data-target="#hard_skill_back">
             Compétences Back-end
             <i class="fa-solid fa-chevron-down"></i>
         </button>
-        <div class="toggle_content" id="hard_skill_back">
+        <div id="hard_skill_back">
             <ul>
                 <li>Programmation en <b>JavaScript</b> côté serveur avec <b>Node.js</b></li>
                 <li>Utilisation du framework <b>Express.js</b> pour créer des applications web et des <b>API REST</b></li>
@@ -475,6 +483,7 @@
             </ul>
         </div>
     </div>
-    <script src="js/app.js"></script>
+    <script src="./js/app.js"></script>
+</div>
 </body>
 </html>

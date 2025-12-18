@@ -1,0 +1,23 @@
+{
+  "name": "cv-interactif-v2",
+  "version": "1.0.0",
+  "description": "Ce projet présente mon CV numérique sous forme d'une page web interactive et responsive.  \r Il est destiné à être intégré dans mon futur portfolio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CedricCampagne/CV-interactif.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CedricCampagne/CV-interactif/issues"
+  },
+  "homepage": "https://github.com/CedricCampagne/CV-interactif#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}

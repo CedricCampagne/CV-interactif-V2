@@ -11,7 +11,7 @@ Il est destiné à être intégré dans mon futur portfolio.
 
 ## 🛠️ Technologies utilisées
 - HTML5
-- CSS3
+- Tailwind CSS
 - JavaScript (DOM, événements, classes, toggle dynamique)
 
 ## 📂 Organisation

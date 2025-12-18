@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer components {
+  /* .toggle_btn.open {
+    @apply text-slate-400;
+  } */
+
+  /* Ajouter la rotation ici */
+  .toggle_btn.open .chevron {
+    @apply rotate-180 transition-transform duration-300;
+  }
+}
+
+
+@layer utilities {
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  .-rotate-180 {
+    transform: rotate(-180deg);
+  }
+}
