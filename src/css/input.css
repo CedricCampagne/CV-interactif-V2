@@ -20,3 +20,33 @@
     transform: rotate(-180deg);
   }
 }
+
+
+@layer utilities {
+
+  td {
+    display: block;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #0b1025;
+  }
+
+  @media (min-width: 1024px) {
+    td {
+      display: table-cell;
+    }
+
+    td::before {
+      content: none;
+      display: none;
+    }
+  }
+}
+
+
+
